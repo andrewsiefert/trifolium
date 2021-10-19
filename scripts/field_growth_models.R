@@ -3,7 +3,7 @@ library(tidyverse)
 library(reshape2)
 
 
-dat= read.csv("C:/Users/Fjords/Documents/Andrew/trifolium/field surveys merged/2015_2016_plot_tri_density.csv")
+dat= read.csv("data/2015_2016_plot_tri_density.csv")
 dat= subset(dat, dat$type %in% c('grid','off-grid','plot'))
 dat$plot= factor(dat$plot); dat$transect= factor(dat$transect)
 d15= subset(dat, year=='2015')[,5:14]
